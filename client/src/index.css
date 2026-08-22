@@ -175,3 +175,10 @@
     }
   }
 }
+
+:root { font-family: "DM Sans", system-ui, sans-serif; color: #173a42; background: #f4f2eb; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at 82% 0%, #d9e6d8 0, transparent 30rem), #f4f2eb; }
+button, input, select, textarea { font: inherit; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #d8a93d; outline-offset: 3px; }
+::selection { color: #fff; background: #195868; }

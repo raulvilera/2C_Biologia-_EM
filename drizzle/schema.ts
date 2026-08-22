@@ -22,7 +22,22 @@ export const users = mysqlTable("users", {
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
 });
 
+export const biologyActivities = mysqlTable("biology_activities", {
+  id: varchar("id", { length: 64 }).primaryKey(),
+  studentId: varchar("studentId", { length: 64 }).notNull(),
+  studentName: varchar("studentName", { length: 255 }).notNull(),
+  questionsJson: text("questionsJson").notNull(),
+  answersJson: text("answersJson"),
+  objectiveScore: int("objectiveScore"),
+  submittedAt: timestamp("submittedAt"),
+  syncStatus: varchar("syncStatus", { length: 32 }).default("PENDING").notNull(),
+  appsScriptRow: int("appsScriptRow"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
+export type BiologyActivity = typeof biologyActivities.$inferSelect;
 
 // TODO: Add your tables here

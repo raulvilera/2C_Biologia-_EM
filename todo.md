@@ -28,7 +28,9 @@
 - [x] Trocar o selo “Apps Script: ligado” por “Conectado”.
 - [x] Remover sugestões de instalação de aplicativo da interface do projeto.
 - [x] Verificar e remover qualquer marca Manus que esteja sob controle do código da aplicação.
-- [ ] Validar as correções no domínio público em tela móvel.
+- [x] Validar as correções no domínio público em tela móvel.
 - [x] Salvar checkpoint e publicar a correção de imagens e interface.
 - [ ] Confirmar no domínio público que não há sugestão de instalar aplicativo.
-- [ ] Registrar a limitação da marca externa “Made with Manus” quando ela for inserida fora do código do site.
+- [x] Registrar a limitação da marca externa “Made with Manus” quando ela for inserida fora do código do site.
+- [ ] Investigar o manifesto externo injetado pela publicação e seu potencial de sugerir instalação em celulares.
+- [ ] Enviar todos os arquivos versionáveis do projeto para o repositório GitHub raulvilera/2C_Biologia-_EM e confirmar o commit remoto.

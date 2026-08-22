@@ -53,4 +53,5 @@
 - [x] Salvar e publicar o bloqueio por aluno antes de confirmar a regra aos estudantes.
 - [x] Substituir a ilustração estática de abertura por uma estrutura 3D de DNA com componentes internos visíveis.
 - [x] Animar a estrutura de DNA com rotação contínua, respeitando desempenho e preferência por menos movimento.
-- [ ] Validar a visualização 3D animada no domínio Vercel em desktop e celular.
+- [x] Validar a visualização 3D animada no domínio Vercel em desktop e celular.
+- [x] Capturar em 375 px no domínio Vercel a hélice em rotação sem deslocar o formulário de identificação.

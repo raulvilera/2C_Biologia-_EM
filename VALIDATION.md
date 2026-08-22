@@ -37,3 +37,7 @@ Após a publicação do backend, a rota pública de criação da atividade foi c
 ## DNA 3D animado
 
 A abertura foi verificada na prévia em desktop e em largura móvel de **375 px**. A nova visualização apresenta as duas fitas de DNA, grupos fosfato, açúcares, pares A–T e C–G e as ligações internas entre as bases. O modelo ocupa o cartão da abertura sem encobrir o conteúdo de identificação e inclui suporte a `prefers-reduced-motion` para interromper a rotação contínua quando solicitado pelo dispositivo.
+
+No domínio Vercel, o cartão atualizado carregou com **14** pares de bases e com a animação `hero-dna-spin` de **14 segundos** em rotação contínua. A mesma composição foi verificada na prévia móvel de 375 px, mantendo a hélice legível, centralizada e sem deslocar o formulário de identificação.
+
+A validação pública móvel foi concluída no domínio da Vercel com viewport de **375 × 812 px**. A captura confirmou o cartão de **320 px** de altura, a hélice centralizada e o texto de estrutura visível; a inspeção retornou **14** pares de bases e a animação `hero-dna-spin` de 14 segundos ativa.

@@ -61,4 +61,5 @@
 - [x] Validar o novo fluxo permanente no domínio Vercel sem enviar respostas de alunos.
 - [x] Remover o botão “Iniciar atividade” do fluxo de identificação.
 - [x] Exibir automaticamente número de chamada, RA, dígito e e-mail institucional após seleção do estudante.
-- [ ] Validar no domínio Vercel os dados preenchidos e o bloqueio de envio único sem enviar respostas.
+- [x] Validar no domínio Vercel os dados preenchidos e o bloqueio de envio único sem enviar respostas.
+- [x] Comprovar pelo domínio Vercel que um aluno já bloqueado continua recusado no caminho final de criação sob demanda.

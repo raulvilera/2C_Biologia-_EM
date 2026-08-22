@@ -51,3 +51,7 @@ O deployment Vercel do commit `52d30e6` foi validado sem selecionar estudante ne
 ## Identificação automática
 
 Na prévia local, a seleção de um estudante preencheu imediatamente os campos somente para leitura de **número de chamada**, **RA**, **dígito** e **e-mail institucional**. Não há botão “Iniciar atividade”; a seleção por si só não criou tentativa nem enviou respostas. O teste do roteador também confirma que os dados exibidos correspondem ao registro escolar selecionado.
+
+No domínio Vercel, a seleção atualizada preencheu os quatro campos solicitados e a inspeção confirmou que não existe botão “Iniciar atividade”. Durante essa seleção, não houve requisição para criar atividade nem para enviar respostas; a criação continua reservada exclusivamente ao envio final.
+
+O caminho de criação sob demanda também foi validado no domínio Vercel com um identificador técnico já reservado: a rota recusou o pedido com a mensagem **“Este estudante já enviou a atividade. Cada aluno pode enviar apenas uma vez.”** Nenhuma atividade ou resposta adicional foi registrada.

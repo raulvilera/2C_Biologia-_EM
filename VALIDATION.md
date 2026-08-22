@@ -55,3 +55,7 @@ Na prévia local, a seleção de um estudante preencheu imediatamente os campos 
 No domínio Vercel, a seleção atualizada preencheu os quatro campos solicitados e a inspeção confirmou que não existe botão “Iniciar atividade”. Durante essa seleção, não houve requisição para criar atividade nem para enviar respostas; a criação continua reservada exclusivamente ao envio final.
 
 O caminho de criação sob demanda também foi validado no domínio Vercel com um identificador técnico já reservado: a rota recusou o pedido com a mensagem **“Este estudante já enviou a atividade. Cada aluno pode enviar apenas uma vez.”** Nenhuma atividade ou resposta adicional foi registrada.
+
+## Divisória temática
+
+A prévia móvel em 375 px confirmou a nova divisória entre a identificação e as questões. Ela apresenta o título **“ATIVIDADE DE BIOLOGIA (3º BIMESTRE)”**, os temas **DNA, RNA, Tradução e Replicação** e uma sombra inferior aplicada ao título, preservando a hierarquia visual sem interferir nos cartões de questões.

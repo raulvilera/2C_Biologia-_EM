@@ -63,3 +63,6 @@
 - [x] Exibir automaticamente número de chamada, RA, dígito e e-mail institucional após seleção do estudante.
 - [x] Validar no domínio Vercel os dados preenchidos e o bloqueio de envio único sem enviar respostas.
 - [x] Comprovar pelo domínio Vercel que um aluno já bloqueado continua recusado no caminho final de criação sob demanda.
+- [x] Substituir a faixa introdutória das questões por uma divisória “ATIVIDADE DE BIOLOGIA (3º BIMESTRE)”.
+- [x] Exibir os temas DNA, RNA, Tradução e Replicação na nova divisória.
+- [ ] Aplicar sombreamento inferior ao título principal e validar a divisória em celular na Vercel.

@@ -24,3 +24,10 @@
 - [x] Inspecionar o carregamento dos recursos visuais e confirmar que são entregues de forma otimizada.
 - [x] Criar checkpoint da atualização com imagens científicas nos enunciados.
 - [x] Otimizar a micrografia real para entrega web com tamanho reduzido.
+- [x] Substituir todas as ilustrações 3D indisponíveis por imagens entregues de forma confiável.
+- [x] Trocar o selo “Apps Script: ligado” por “Conectado”.
+- [ ] Remover sugestões de instalação de aplicativo da interface do projeto.
+- [x] Verificar e remover qualquer marca Manus que esteja sob controle do código da aplicação.
+- [ ] Validar as correções no domínio público em tela móvel.
+- [ ] Salvar checkpoint e publicar a correção de imagens e interface.
+- [ ] Confirmar no domínio público que não há sugestão de instalar aplicativo.

@@ -13,9 +13,10 @@ export const QUESTION_VISUALS: Record<string, QuestionVisual> = {
     credit: { label: "Micrografia de células HeLa · NIGMS/NIH", href: "https://nigms.nih.gov/image-gallery/3521" },
   },
   "bioethics-review": {
-    src: "/manus-storage/bio-3d-bioethics-cells_cb93b139.png",
-    alt: "Modelo científico 3D de células humanas em cultura, em uma placa de laboratório, associado à pesquisa responsável.",
-    label: "Modelo científico 3D",
+    src: "/manus-storage/hela-cells-nih-1200_f9085c75.webp",
+    alt: "Micrografia fluorescente de células HeLa, usada como referência visual para pesquisa com células humanas.",
+    label: "Imagem científica real",
+    credit: { label: "Micrografia de células HeLa · NIGMS/NIH", href: "https://nigms.nih.gov/image-gallery/3521" },
   },
   "dna-rna": {
     src: "/manus-storage/bio-3d-dna-rna_cb5c880a.png",
@@ -23,9 +24,9 @@ export const QUESTION_VISUALS: Record<string, QuestionVisual> = {
     label: "Modelo científico 3D",
   },
   replication: {
-    src: "/manus-storage/bio-3d-replication_194881f2.png",
-    alt: "Modelo científico 3D de uma forquilha de replicação do DNA com novas fitas sendo formadas.",
-    label: "Modelo científico 3D",
+    src: "/manus-storage/bio-3d-dna-rna_cb5c880a.png",
+    alt: "Modelo científico 3D de uma molécula de DNA, usado para observar a estrutura que é copiada durante a replicação.",
+    label: "Modelo molecular 3D",
   },
   transcription: {
     src: "/manus-storage/bio-3d-dna-rna_cb5c880a.png",
@@ -33,19 +34,20 @@ export const QUESTION_VISUALS: Record<string, QuestionVisual> = {
     label: "Modelo científico 3D",
   },
   trna: {
-    src: "/manus-storage/bio-3d-translation_4dd49a21.png",
-    alt: "Modelo científico 3D de um ribossomo, RNA mensageiro e RNA transportador durante a tradução.",
-    label: "Modelo científico 3D",
+    src: "/manus-storage/bio-3d-dna-rna_cb5c880a.png",
+    alt: "Modelo molecular 3D de DNA e RNA, relacionado aos tipos de RNA que participam da produção de proteínas.",
+    label: "Modelo molecular 3D",
   },
   translation: {
-    src: "/manus-storage/bio-3d-translation_4dd49a21.png",
-    alt: "Modelo científico 3D de um ribossomo realizando a síntese de uma cadeia de aminoácidos a partir do RNA mensageiro.",
-    label: "Modelo científico 3D",
+    src: "/manus-storage/bio-3d-dna-rna_cb5c880a.png",
+    alt: "Modelo molecular 3D de DNA e RNA, relacionado à leitura da informação genética durante a tradução.",
+    label: "Modelo molecular 3D",
   },
   "discursive-ethics": {
-    src: "/manus-storage/bio-3d-bioethics-cells_cb93b139.png",
-    alt: "Modelo científico 3D de células humanas em cultura, associado a ética, consentimento e privacidade em pesquisa.",
-    label: "Modelo científico 3D",
+    src: "/manus-storage/hela-cells-nih-1200_f9085c75.webp",
+    alt: "Micrografia fluorescente de células HeLa, relacionada a ética, consentimento e privacidade em pesquisa celular.",
+    label: "Imagem científica real",
+    credit: { label: "Micrografia de células HeLa · NIGMS/NIH", href: "https://nigms.nih.gov/image-gallery/3521" },
   },
   "discursive-dna": {
     src: "/manus-storage/bio-3d-dna-rna_cb5c880a.png",
@@ -53,9 +55,9 @@ export const QUESTION_VISUALS: Record<string, QuestionVisual> = {
     label: "Modelo científico 3D",
   },
   "discursive-expression": {
-    src: "/manus-storage/bio-3d-translation_4dd49a21.png",
-    alt: "Modelo científico 3D da tradução genética com ribossomo, RNA e cadeia proteica em formação.",
-    label: "Modelo científico 3D",
+    src: "/manus-storage/bio-3d-dna-rna_cb5c880a.png",
+    alt: "Modelo molecular 3D de DNA e RNA, relacionado às etapas de transcrição e tradução da informação genética.",
+    label: "Modelo molecular 3D",
   },
 };
 

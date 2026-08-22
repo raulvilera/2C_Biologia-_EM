@@ -17,3 +17,10 @@
 - [x] Validar a conexão com Apps Script, criação da atividade e fluxo de envio.
 - [x] Confirmar remotamente o registro no Apps Script com o payload escolar completo.
 - [x] Criar checkpoint e entregar o site pronto para publicação permanente.
+- [x] Selecionar imagens científicas reais e ilustrações 3D para bioética/células HeLa, DNA/RNA, transcrição e tradução.
+- [x] Integrar uma imagem temática acessível em cada enunciado da atividade.
+- [x] Validar responsividade, legibilidade e desempenho dos novos recursos visuais.
+- [x] Verificar em desktop e celular a renderização de imagens em múltiplos enunciados.
+- [x] Inspecionar o carregamento dos recursos visuais e confirmar que são entregues de forma otimizada.
+- [x] Criar checkpoint da atualização com imagens científicas nos enunciados.
+- [x] Otimizar a micrografia real para entrega web com tamanho reduzido.

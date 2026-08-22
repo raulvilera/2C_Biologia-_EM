@@ -31,7 +31,7 @@ export const QUESTION_VISUALS: Record<string, QuestionVisual> = {
     credit: { label: "DNA Polymerase · PDB-101/RCSB", href: "https://pdb101.rcsb.org/motm/113" },
   },
   transcription: {
-    src: "/manus-storage/transcription-rna-laboratory_a068c312.jpg",
+    src: "/manus-storage/transcription-rna-laboratory-1600_89043b1d.jpg",
     alt: "Imagem real de laboratório que registra uma técnica de visualização da atividade de RNA em tecido biológico.",
     label: "Visualização real de atividade de RNA",
     credit: { label: "Pesquisa de RNA · Yale News", href: "https://news.yale.edu/" },
@@ -49,19 +49,19 @@ export const QUESTION_VISUALS: Record<string, QuestionVisual> = {
     credit: { label: "PDB 3J78 · RCSB Protein Data Bank", href: "https://www.rcsb.org/structure/3J78" },
   },
   "discursive-ethics": {
-    src: "/manus-storage/discursive-ethics-cell-research_4a9e7a67.jpg",
+    src: "/manus-storage/discursive-ethics-cell-research-1600_ceed01b8.jpg",
     alt: "Fotografia real de pesquisadora em laboratório de células-tronco, relacionada ao cuidado ético no uso de células humanas.",
     label: "Pesquisa celular em laboratório",
     credit: { label: "Pesquisa com células · NIH Stem Cell Information", href: "https://stemcells.nih.gov/" },
   },
   "discursive-dna": {
-    src: "/manus-storage/discursive-dna-gel-electrophoresis_b5b20f94.jpg",
+    src: "/manus-storage/discursive-dna-gel-electrophoresis-1600_0d47ad22.jpg",
     alt: "Fotografia real de um gel de agarose com bandas de DNA separadas por eletroforese.",
     label: "Eletroforese de DNA real",
     credit: { label: "DNA em gel de agarose · Wikimedia Commons", href: "https://commons.wikimedia.org/wiki/File:DNA_Agarose_gel_electrophoresis.jpg" },
   },
   "discursive-expression": {
-    src: "/manus-storage/discursive-expression-protein-electron_1d4f3721.jpg",
+    src: "/manus-storage/discursive-expression-protein-electron-1600_daf5bd1c.jpg",
     alt: "Imagem real de uma proteína observada com microscopia eletrônica, relacionada ao produto da expressão gênica.",
     label: "Proteína em microscopia eletrônica",
     credit: { label: "Imagem de proteína · Berkeley Lab", href: "https://newscenter.lbl.gov/" },

@@ -51,3 +51,6 @@
 - [x] Impedir no servidor um novo envio definitivo para o mesmo aluno, inclusive em uma nova tentativa ou outro navegador.
 - [x] Cobrir em testes o bloqueio de segunda tentativa por aluno e validar a regra publicada.
 - [x] Salvar e publicar o bloqueio por aluno antes de confirmar a regra aos estudantes.
+- [x] Substituir a ilustração estática de abertura por uma estrutura 3D de DNA com componentes internos visíveis.
+- [x] Animar a estrutura de DNA com rotação contínua, respeitando desempenho e preferência por menos movimento.
+- [ ] Validar a visualização 3D animada no domínio Vercel em desktop e celular.

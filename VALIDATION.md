@@ -45,3 +45,5 @@ A validação pública móvel foi concluída no domínio da Vercel com viewport 
 ## Questões permanentes
 
 Na prévia sem atividade salva nem estudante selecionado, as dez questões foram carregadas diretamente pela consulta pública de prévia. A página exibiu os números **01 a 10** em sequência, com ordem e alternativas embaralhadas pela chave do acesso. A seleção de estudante permaneceu disponível somente para criar o registro que permite o envio único das respostas.
+
+O deployment Vercel do commit `52d30e6` foi validado sem selecionar estudante nem enviar respostas. Após a conclusão das consultas públicas, exibiu as dez questões numeradas de **01 a 10**, alternativas embaralhadas e o aviso de que a identificação é necessária apenas antes do envio final.

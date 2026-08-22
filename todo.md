@@ -58,4 +58,4 @@
 - [x] Exibir as dez questões desde o carregamento da página, sem exigir seleção prévia de estudante.
 - [x] Embaralhar a ordem das questões e alternativas em cada acesso mantendo números sequenciais de 1 a 10.
 - [x] Manter seleção de estudante apenas como requisito para envio único e registro das respostas.
-- [ ] Validar o novo fluxo permanente no domínio Vercel sem enviar respostas de alunos.
+- [x] Validar o novo fluxo permanente no domínio Vercel sem enviar respostas de alunos.

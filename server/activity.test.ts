@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildActivity, buildAppsScriptPayload, FIXED_QUESTIONS, gradeObjectiveAnswers, toPublicActivity } from "./activity";
+import { buildActivity, buildAppsScriptPayload, createSeededRandom, FIXED_QUESTIONS, gradeObjectiveAnswers, toPublicActivity } from "./activity";
 
 describe("atividade fixa de Biologia", () => {
   it("possui exatamente sete questões objetivas e três discursivas", () => {
@@ -13,6 +13,13 @@ describe("atividade fixa de Biologia", () => {
     const answers = activity.questions.map(question => ({ questionNumber: question.number, answer: question.type === "objective" ? question.correctOption : "Resposta discursiva." }));
     const grade = gradeObjectiveAnswers(activity, answers);
     expect(grade).toMatchObject({ correct: 7, total: 7 });
+  });
+
+  it("mantém uma ordem embaralhada e numeração sequencial para o mesmo acesso", () => {
+    const first = buildActivity({ id: "preview-1", studentId: "preview", studentNumber: 0, studentName: "Prévia", studentRa: "", studentDigit: "", studentEmail: "", random: createSeededRandom("acesso-publico-123") });
+    const second = buildActivity({ id: "atividade-1", studentId: "01", studentNumber: 1, studentName: "Estudante", studentRa: "000000000001", studentDigit: "0", studentEmail: "teste@example.com", random: createSeededRandom("acesso-publico-123") });
+    expect(first.questions.map(question => question.id)).toEqual(second.questions.map(question => question.id));
+    expect(first.questions.map(question => question.number)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
 
   it("não expõe o gabarito ou o índice correto no objeto público", () => {

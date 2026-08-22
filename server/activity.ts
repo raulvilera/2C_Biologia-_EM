@@ -120,6 +120,22 @@ function shuffle<T>(items: readonly T[], random = Math.random): T[] {
   return result;
 }
 
+/** Gerador determinístico por acesso: mantém a prévia e o envio do mesmo estudante na mesma ordem. */
+export function createSeededRandom(seed: string): () => number {
+  let state = 2166136261;
+  for (const character of seed) {
+    state ^= character.charCodeAt(0);
+    state = Math.imul(state, 16777619);
+  }
+  return () => {
+    state += 0x6d2b79f5;
+    let value = state;
+    value = Math.imul(value ^ (value >>> 15), value | 1);
+    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 export function buildActivity(input: { id: string; studentId: string; studentNumber: number; studentName: string; studentRa: string; studentDigit: string; studentEmail: string; random?: () => number }): StoredActivity {
   const labels = ["A", "B", "C", "D"] as const;
   const questions = shuffle(FIXED_QUESTIONS, input.random).map((fixed, questionIndex) => {

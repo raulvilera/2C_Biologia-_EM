@@ -41,3 +41,7 @@ A abertura foi verificada na prévia em desktop e em largura móvel de **375 px*
 No domínio Vercel, o cartão atualizado carregou com **14** pares de bases e com a animação `hero-dna-spin` de **14 segundos** em rotação contínua. A mesma composição foi verificada na prévia móvel de 375 px, mantendo a hélice legível, centralizada e sem deslocar o formulário de identificação.
 
 A validação pública móvel foi concluída no domínio da Vercel com viewport de **375 × 812 px**. A captura confirmou o cartão de **320 px** de altura, a hélice centralizada e o texto de estrutura visível; a inspeção retornou **14** pares de bases e a animação `hero-dna-spin` de 14 segundos ativa.
+
+## Questões permanentes
+
+Na prévia sem atividade salva nem estudante selecionado, as dez questões foram carregadas diretamente pela consulta pública de prévia. A página exibiu os números **01 a 10** em sequência, com ordem e alternativas embaralhadas pela chave do acesso. A seleção de estudante permaneceu disponível somente para criar o registro que permite o envio único das respostas.

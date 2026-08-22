@@ -65,7 +65,17 @@ describe("envio único da atividade", () => {
     const caller = activityRouter.createCaller({} as never);
     mocks.previous.mockResolvedValue({ studentId: String(STUDENTS[0].number), activityId: "atividade-anterior" });
 
-    await expect(caller.create({ id: String(STUDENTS[0].number) })).rejects.toThrow("Cada aluno pode enviar apenas uma vez");
+    await expect(caller.create({ id: String(STUDENTS[0].number), accessKey: "acesso-publico-123" })).rejects.toThrow("Cada aluno pode enviar apenas uma vez");
     expect(mocks.create).not.toHaveBeenCalled();
+  });
+
+  it("entrega as questões antes da identificação e preserva a ordem ao iniciar a atividade", async () => {
+    const caller = activityRouter.createCaller({} as never);
+    const accessKey = "acesso-publico-456";
+    const preview = await caller.preview({ accessKey });
+    const created = await caller.create({ id: String(STUDENTS[0].number), accessKey });
+    expect(preview.questions).toHaveLength(10);
+    expect(preview.questions.map(question => question.number)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(created.questions.map(question => question.id)).toEqual(preview.questions.map(question => question.id));
   });
 });

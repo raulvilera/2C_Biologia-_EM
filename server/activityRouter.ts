@@ -1,12 +1,13 @@
 import { nanoid } from "nanoid";
 import { z } from "zod";
-import { buildActivity, buildAppsScriptPayload, gradeObjectiveAnswers, StoredActivity, submittedAnswerSchema, toPublicActivity } from "./activity";
+import { buildActivity, buildAppsScriptPayload, createSeededRandom, gradeObjectiveAnswers, StoredActivity, submittedAnswerSchema, toPublicActivity } from "./activity";
 import { checkAppsScriptConnection, sendToAppsScript } from "./appsScript";
 import { claimBiologySubmission, createBiologyActivity, getBiologyActivity, getBiologyStudentSubmission, reserveBiologyStudentSubmission, updateBiologySync } from "./db";
 import { publicProcedure, router } from "./_core/trpc";
 import { STUDENTS } from "./students";
 
 const studentSchema = z.object({ id: z.string().min(1).max(64) });
+const accessSchema = z.object({ accessKey: z.string().min(12).max(128) });
 const activityIdSchema = z.object({ activityId: z.string().min(8).max(64) });
 
 function parseStoredActivity(row: { questionsJson: string }): StoredActivity {
@@ -19,13 +20,26 @@ export const activityRouter = router({
     const payload = await checkAppsScriptConnection();
     return { connected: true, sheet: payload.sheet ?? "2ºBIO 3º" };
   }),
-  create: publicProcedure.input(studentSchema).mutation(async ({ input }) => {
+  preview: publicProcedure.input(accessSchema).query(({ input }) => {
+    const activity = buildActivity({
+      id: `preview-${input.accessKey}`,
+      studentId: "preview",
+      studentNumber: 0,
+      studentName: "Prévia da atividade",
+      studentRa: "",
+      studentDigit: "",
+      studentEmail: "",
+      random: createSeededRandom(input.accessKey),
+    });
+    return toPublicActivity(activity);
+  }),
+  create: publicProcedure.input(studentSchema.extend(accessSchema.shape)).mutation(async ({ input }) => {
     const student = STUDENTS.find(candidate => String(candidate.number) === input.id);
     if (!student) throw new Error("Estudante não encontrado na turma 2ª Série C.");
     const previousSubmission = await getBiologyStudentSubmission(input.id);
     if (previousSubmission) throw new Error("Este estudante já enviou a atividade. Cada aluno pode enviar apenas uma vez.");
     const id = nanoid(18);
-    const activity = buildActivity({ id, studentId: input.id, studentNumber: student.number, studentName: student.name, studentRa: student.ra, studentDigit: student.digit, studentEmail: student.email });
+    const activity = buildActivity({ id, studentId: input.id, studentNumber: student.number, studentName: student.name, studentRa: student.ra, studentDigit: student.digit, studentEmail: student.email, random: createSeededRandom(input.accessKey) });
     await createBiologyActivity({ id, studentId: input.id, studentName: student.name, questionsJson: JSON.stringify(activity) });
     return toPublicActivity(activity);
   }),

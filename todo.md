@@ -38,5 +38,9 @@
 - [x] Validar o link de produção da Vercel sem enviar respostas de alunos.
 - [x] Definir a execução Vercel como interface estática com rewrites para o servidor permanente, em vez de uma função Express duplicada.
 - [ ] Migrar e validar um backend full-stack autônomo na Vercel, caso essa migração integral seja necessária no futuro.
+- [x] Substituir imagens repetidas por recursos reais, distintos e relevantes em cada um dos dez enunciados.
+- [x] Transformar alternativas em botões azul-escuros em alto-relevo, com texto branco em negrito, brilho de borda e efeito afundado ao selecionar.
+- [ ] Validar imagens, contraste, estados de seleção e responsividade no domínio Vercel.
+- [ ] Confirmar no domínio Vercel, em desktop e celular, duas questões com imagens reais carregadas e alternativas selecionadas em alto-relevo.
 - [x] Documentar as variáveis obrigatórias na Vercel sem registrar valores secretos no repositório.
 - [x] Configurar a Vercel como interface estática com rewrites para API e imagens do servidor permanente.

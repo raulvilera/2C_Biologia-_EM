@@ -13,3 +13,7 @@ Também foi realizada uma captura da URL publicada com largura de **375 px** e a
 Em 22 de agosto de 2026, o domínio `https://2-c-biologia-em.vercel.app/` foi validado após a configuração de interface Vite com rewrites para o servidor permanente. A página entregou HTML, bundle JavaScript, lista pública de estudantes e as duas imagens científicas usadas pela atividade. A consulta de estudantes respondeu com HTTP 200 através de `/api/trpc` sem criar tentativas nem enviar respostas.
 
 No domínio Vercel, a página não contém **Made with Manus**, utiliza somente `/no-install.webmanifest`, não possui `service worker` registrado e declara `mobile-web-app-capable=no` e `apple-mobile-web-app-capable=no`. Dessa forma, a marca e o manifesto injetados no domínio `manus.space` não acompanham a implantação Vercel.
+
+## Recursos visuais e alternativas em relevo
+
+Foram preparados dez recursos científicos reais e distintos, um para cada identificador de enunciado. A prévia visual confirmou o carregamento da micrografia de células HeLa e da estrutura experimental DNA-RNA, ambas com crédito na interface. As alternativas objetivas agora usam fundo azul-escuro, tipografia branca em negrito, contorno luminoso e relevo. Na verificação de interação, uma alternativa marcada permaneceu selecionada com deslocamento vertical de `5px`, sombra reduzida de botão pressionado e texto calculado em branco.

@@ -45,3 +45,6 @@
 - [x] Validar em largura móvel no domínio Vercel as imagens distintas e o estado afundado da alternativa selecionada, sem envio de respostas.
 - [x] Documentar as variáveis obrigatórias na Vercel sem registrar valores secretos no repositório.
 - [x] Configurar a Vercel como interface estática com rewrites para API e imagens do servidor permanente.
+- [ ] Exibir alternativas claras no estado normal e aplicar azul-escuro apenas à alternativa selecionada.
+- [ ] Redimensionar os cartões de imagem para leitura mais equilibrada em desktop e celular.
+- [ ] Ampliar a diversidade visual com recursos científicos reais mais variados e validar a atualização na Vercel.

@@ -258,3 +258,65 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 @media (prefers-reduced-motion: reduce) {
   #questoes label:has(input[type="radio"]) { transition: none; }
 }
+
+/* Estado normal claro: o azul-escuro é reservado exclusivamente ao clique e à resposta escolhida. */
+#questoes label:has(input[type="radio"]) {
+  border-color: #b8d0dc !important;
+  background: linear-gradient(145deg, #ffffff 0%, #eef6f8 100%) !important;
+  color: #17465d !important;
+  box-shadow:
+    0 6px 0 #a7c1cd,
+    0 0 0 1px rgba(129, 180, 199, 0.3),
+    0 5px 18px rgba(26, 91, 116, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+  text-shadow: none;
+}
+
+#questoes label:has(input[type="radio"]):hover {
+  border-color: #75a9be !important;
+  background: linear-gradient(145deg, #ffffff 0%, #e4f2f6 100%) !important;
+  filter: none;
+  box-shadow:
+    0 7px 0 #a7c1cd,
+    0 0 0 2px rgba(122, 194, 221, 0.42),
+    0 7px 20px rgba(26, 91, 116, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+#questoes label:has(input[type="radio"]):active,
+#questoes label:has(input[type="radio"]:checked) {
+  border-color: #70dcff !important;
+  background: linear-gradient(145deg, #155e8e 0%, #0b426b 46%, #072f51 100%) !important;
+  color: #ffffff !important;
+  filter: brightness(0.98);
+  transform: translateY(5px);
+  box-shadow:
+    0 3px 0 #042b48,
+    0 0 0 2px rgba(206, 248, 255, 0.9),
+    0 0 24px rgba(56, 189, 248, 0.94),
+    inset 0 4px 12px rgba(1, 25, 43, 0.62),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16) !important;
+}
+
+#questoes label:has(input[type="radio"]) strong,
+#questoes label:has(input[type="radio"]) span { color: #17465d !important; }
+
+#questoes label:has(input[type="radio"]:checked) strong,
+#questoes label:has(input[type="radio"]:checked) span,
+#questoes label:has(input[type="radio"]):active strong,
+#questoes label:has(input[type="radio"]):active span { color: #ffffff !important; }
+
+#questoes label:has(input[type="radio"]) input[type="radio"] {
+  border-color: #4d7c92;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 63, 84, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+/* Imagens reais preservam a proporção original e ocupam menos altura em telas pequenas. */
+#questoes figure:has(img) { max-width: 52rem; background: #edf4f2; }
+#questoes figure:has(img) img {
+  height: clamp(12.5rem, 30vw, 20rem) !important;
+  object-fit: contain !important;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #f7fbfa, #e8f1f0);
+}

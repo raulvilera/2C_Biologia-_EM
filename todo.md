@@ -34,3 +34,8 @@
 - [x] Registrar a limitação da marca externa “Made with Manus” quando ela for inserida fora do código do site.
 - [ ] Investigar o manifesto externo injetado pela publicação e seu potencial de sugerir instalação em celulares.
 - [x] Enviar todos os arquivos versionáveis do projeto para o repositório GitHub raulvilera/2C_Biologia-_EM e confirmar o commit remoto.
+- [ ] Diagnosticar e adaptar o projeto para implantação funcional na Vercel, incluindo execução do servidor, dados e variáveis seguras.
+- [ ] Validar o link de produção da Vercel sem enviar respostas de alunos.
+- [ ] Criar a entrada Express compatível com Vercel e definir a saída estática correta em vercel.json.
+- [x] Documentar as variáveis obrigatórias na Vercel sem registrar valores secretos no repositório.
+- [x] Configurar a Vercel como interface estática com rewrites para API e imagens do servidor permanente.

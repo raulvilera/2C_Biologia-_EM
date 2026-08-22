@@ -78,4 +78,16 @@ describe("envio único da atividade", () => {
     expect(preview.questions.map(question => question.number)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     expect(created.questions.map(question => question.id)).toEqual(preview.questions.map(question => question.id));
   });
+
+  it("fornece os dados escolares necessários para preenchimento automático após a seleção", async () => {
+    const caller = activityRouter.createCaller({} as never);
+    const students = await caller.students();
+    expect(students[0]).toMatchObject({
+      id: String(STUDENTS[0].number),
+      number: STUDENTS[0].number,
+      ra: STUDENTS[0].ra,
+      digit: STUDENTS[0].digit,
+      email: STUDENTS[0].email,
+    });
+  });
 });

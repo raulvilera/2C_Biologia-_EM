@@ -59,3 +59,6 @@
 - [x] Embaralhar a ordem das questões e alternativas em cada acesso mantendo números sequenciais de 1 a 10.
 - [x] Manter seleção de estudante apenas como requisito para envio único e registro das respostas.
 - [x] Validar o novo fluxo permanente no domínio Vercel sem enviar respostas de alunos.
+- [x] Remover o botão “Iniciar atividade” do fluxo de identificação.
+- [x] Exibir automaticamente número de chamada, RA, dígito e e-mail institucional após seleção do estudante.
+- [ ] Validar no domínio Vercel os dados preenchidos e o bloqueio de envio único sem enviar respostas.

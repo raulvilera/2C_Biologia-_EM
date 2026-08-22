@@ -15,7 +15,7 @@ function parseStoredActivity(row: { questionsJson: string }): StoredActivity {
 }
 
 export const activityRouter = router({
-  students: publicProcedure.query(() => STUDENTS.map(student => ({ id: String(student.number), name: student.name }))),
+  students: publicProcedure.query(() => STUDENTS.map(student => ({ id: String(student.number), name: student.name, number: student.number, ra: student.ra, digit: student.digit, email: student.email }))),
   connection: publicProcedure.query(async () => {
     const payload = await checkAppsScriptConnection();
     return { connected: true, sheet: payload.sheet ?? "2ºBIO 3º" };

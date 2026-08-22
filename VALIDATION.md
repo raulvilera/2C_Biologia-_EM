@@ -31,3 +31,5 @@ Na versão com imagens redimensionadas, o domínio Vercel confirmou que a altern
 ## Envio único por aluno
 
 Foi criada a tabela `biology_student_submissions`, cuja chave primária é o identificador do estudante. No envio, o servidor reserva esse identificador antes de registrar as respostas; uma nova tentativa do mesmo aluno, inclusive com outro `activityId`, é recusada pelo banco. A migração também registrou os envios já existentes: a conferência retornou **4** reservas para **4** atividades submetidas. Os testes do roteador cobrem tanto a segunda submissão quanto a tentativa de iniciar uma nova atividade após o envio.
+
+Após a publicação do backend, a rota pública de criação da atividade foi consultada pelo domínio da Vercel para um identificador já reservado. O servidor respondeu com a mensagem de bloqueio **“Cada aluno pode enviar apenas uma vez”**, sem criar nova atividade. A validação usou somente o identificador numérico interno de uma submissão de teste já existente e não enviou respostas.

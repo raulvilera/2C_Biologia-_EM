@@ -48,6 +48,6 @@
 - [x] Exibir alternativas claras no estado normal e aplicar azul-escuro apenas à alternativa selecionada.
 - [x] Redimensionar os cartões de imagem para leitura mais equilibrada em desktop e celular.
 - [x] Ampliar a diversidade visual com recursos científicos reais mais variados e validar a atualização na Vercel.
-- [ ] Impedir no servidor um novo envio definitivo para o mesmo aluno, inclusive em uma nova tentativa ou outro navegador.
-- [ ] Cobrir em testes o bloqueio de segunda tentativa por aluno e validar a regra publicada.
-- [ ] Salvar e publicar o bloqueio por aluno antes de confirmar a regra aos estudantes.
+- [x] Impedir no servidor um novo envio definitivo para o mesmo aluno, inclusive em uma nova tentativa ou outro navegador.
+- [x] Cobrir em testes o bloqueio de segunda tentativa por aluno e validar a regra publicada.
+- [x] Salvar e publicar o bloqueio por aluno antes de confirmar a regra aos estudantes.

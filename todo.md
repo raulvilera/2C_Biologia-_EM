@@ -65,4 +65,5 @@
 - [x] Comprovar pelo domínio Vercel que um aluno já bloqueado continua recusado no caminho final de criação sob demanda.
 - [x] Substituir a faixa introdutória das questões por uma divisória “ATIVIDADE DE BIOLOGIA (3º BIMESTRE)”.
 - [x] Exibir os temas DNA, RNA, Tradução e Replicação na nova divisória.
-- [ ] Aplicar sombreamento inferior ao título principal e validar a divisória em celular na Vercel.
+- [x] Aplicar sombreamento inferior ao título principal e validar a divisória em celular na Vercel.
+- [x] Validar explicitamente a divisória publicada no domínio Vercel em viewport móvel de 375 px e registrar a evidência.

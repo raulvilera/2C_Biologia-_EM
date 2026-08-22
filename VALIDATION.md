@@ -59,3 +59,7 @@ O caminho de criação sob demanda também foi validado no domínio Vercel com u
 ## Divisória temática
 
 A prévia móvel em 375 px confirmou a nova divisória entre a identificação e as questões. Ela apresenta o título **“ATIVIDADE DE BIOLOGIA (3º BIMESTRE)”**, os temas **DNA, RNA, Tradução e Replicação** e uma sombra inferior aplicada ao título, preservando a hierarquia visual sem interferir nos cartões de questões.
+
+Após a publicação, o domínio Vercel confirmou a presença da divisória no estado inicial público, antes da primeira questão. A verificação em 375 px preservou a leitura do título, dos temas e a sombra tipográfica; as questões continuaram disponíveis sem seleção prévia de estudante.
+
+A captura explícita do endereço `https://2-c-biologia-em.vercel.app/` em viewport móvel de **375 × 812 px** confirmou a divisória no próprio domínio publicado. O título ficou legível em três linhas — **“ATIVIDADE DE BIOLOGIA (3º BIMESTRE)”** —, mantendo a sombra inferior discreta; a linha **“Temas: DNA, RNA, Tradução, Replicação.”** também permaneceu visível antes das questões.

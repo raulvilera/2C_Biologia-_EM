@@ -37,7 +37,7 @@
 - [x] Diagnosticar e adaptar a interface para implantação funcional na Vercel com rewrites seguros para o servidor e os dados permanentes.
 - [x] Validar o link de produção da Vercel sem enviar respostas de alunos.
 - [x] Definir a execução Vercel como interface estática com rewrites para o servidor permanente, em vez de uma função Express duplicada.
-- [ ] Migrar e validar um backend full-stack autônomo na Vercel, caso essa migração integral seja necessária no futuro.
+- [x] Avaliar migração full-stack autônoma na Vercel: não necessária para a implantação atual, que usa rewrites seguros para o backend permanente.
 - [x] Substituir imagens repetidas por recursos reais, distintos e relevantes em cada um dos dez enunciados.
 - [x] Transformar alternativas em botões azul-escuros em alto-relevo, com texto branco em negrito, brilho de borda e efeito afundado ao selecionar.
 - [x] Validar imagens, contraste, estados de seleção e responsividade no domínio Vercel.
@@ -45,6 +45,6 @@
 - [x] Validar em largura móvel no domínio Vercel as imagens distintas e o estado afundado da alternativa selecionada, sem envio de respostas.
 - [x] Documentar as variáveis obrigatórias na Vercel sem registrar valores secretos no repositório.
 - [x] Configurar a Vercel como interface estática com rewrites para API e imagens do servidor permanente.
-- [ ] Exibir alternativas claras no estado normal e aplicar azul-escuro apenas à alternativa selecionada.
-- [ ] Redimensionar os cartões de imagem para leitura mais equilibrada em desktop e celular.
-- [ ] Ampliar a diversidade visual com recursos científicos reais mais variados e validar a atualização na Vercel.
+- [x] Exibir alternativas claras no estado normal e aplicar azul-escuro apenas à alternativa selecionada.
+- [x] Redimensionar os cartões de imagem para leitura mais equilibrada em desktop e celular.
+- [x] Ampliar a diversidade visual com recursos científicos reais mais variados e validar a atualização na Vercel.

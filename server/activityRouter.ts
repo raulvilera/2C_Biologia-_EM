@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import { z } from "zod";
 import { buildActivity, buildAppsScriptPayload, gradeObjectiveAnswers, StoredActivity, submittedAnswerSchema, toPublicActivity } from "./activity";
 import { checkAppsScriptConnection, sendToAppsScript } from "./appsScript";
-import { claimBiologySubmission, createBiologyActivity, getBiologyActivity, updateBiologySync } from "./db";
+import { claimBiologySubmission, createBiologyActivity, getBiologyActivity, getBiologyStudentSubmission, reserveBiologyStudentSubmission, updateBiologySync } from "./db";
 import { publicProcedure, router } from "./_core/trpc";
 import { STUDENTS } from "./students";
 
@@ -22,6 +22,8 @@ export const activityRouter = router({
   create: publicProcedure.input(studentSchema).mutation(async ({ input }) => {
     const student = STUDENTS.find(candidate => String(candidate.number) === input.id);
     if (!student) throw new Error("Estudante não encontrado na turma 2ª Série C.");
+    const previousSubmission = await getBiologyStudentSubmission(input.id);
+    if (previousSubmission) throw new Error("Este estudante já enviou a atividade. Cada aluno pode enviar apenas uma vez.");
     const id = nanoid(18);
     const activity = buildActivity({ id, studentId: input.id, studentNumber: student.number, studentName: student.name, studentRa: student.ra, studentDigit: student.digit, studentEmail: student.email });
     await createBiologyActivity({ id, studentId: input.id, studentName: student.name, questionsJson: JSON.stringify(activity) });
@@ -38,6 +40,8 @@ export const activityRouter = router({
     if (!row) throw new Error("Atividade não encontrada.");
     const activity = parseStoredActivity(row);
     const grade = gradeObjectiveAnswers(activity, input.answers);
+    const reserved = await reserveBiologyStudentSubmission({ studentId: activity.studentId, activityId: activity.id });
+    if (!reserved) throw new Error("Este estudante já enviou a atividade. Cada aluno pode enviar apenas uma vez.");
     const claimed = await claimBiologySubmission({ id: activity.id, answersJson: JSON.stringify(input.answers), objectiveScore: grade.correct });
     if (!claimed) throw new Error("Esta atividade já foi enviada. Cada estudante pode enviar apenas uma vez.");
 

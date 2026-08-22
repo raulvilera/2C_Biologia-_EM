@@ -36,6 +36,12 @@ export const biologyActivities = mysqlTable("biology_activities", {
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
 
+export const biologyStudentSubmissions = mysqlTable("biology_student_submissions", {
+  studentId: varchar("studentId", { length: 64 }).primaryKey(),
+  activityId: varchar("activityId", { length: 64 }).notNull().unique(),
+  submittedAt: timestamp("submittedAt").defaultNow().notNull(),
+});
+
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 export type BiologyActivity = typeof biologyActivities.$inferSelect;

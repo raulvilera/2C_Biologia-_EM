@@ -27,3 +27,7 @@ Após o commit `11d423c`, a Vercel passou a entregar o novo stylesheet com o est
 No domínio público da Vercel, uma prévia local sem dados de alunos confirmou três recursos reais e distintos carregados: micrografia de células HeLa (`1090 × 818`), laboratório de RNA (`1260 × 840`) e gel de agarose com DNA (`3840 × 2550`). A alternativa não selecionada apresentou fundo claro e texto azul-petróleo; a alternativa selecionada apresentou gradiente azul-escuro e texto branco.
 
 Na versão com imagens redimensionadas, o domínio Vercel confirmou que a alternativa marcada preserva texto branco e deslocamento de `5px`, enquanto as não marcadas mantêm fundo claro e texto azul-petróleo. A imagem de laboratório de RNA otimizada e a imagem de gel de DNA otimizada foram carregadas com êxito; a segunda apresentou dimensões naturais de `1506 × 1000`. As quatro imagens novas foram reduzidas para arquivos entre aproximadamente `155 KB` e `229 KB` antes da publicação.
+
+## Envio único por aluno
+
+Foi criada a tabela `biology_student_submissions`, cuja chave primária é o identificador do estudante. No envio, o servidor reserva esse identificador antes de registrar as respostas; uma nova tentativa do mesmo aluno, inclusive com outro `activityId`, é recusada pelo banco. A migração também registrou os envios já existentes: a conferência retornou **4** reservas para **4** atividades submetidas. Os testes do roteador cobrem tanto a segunda submissão quanto a tentativa de iniciar uma nova atividade após o envio.

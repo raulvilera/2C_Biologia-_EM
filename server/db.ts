@@ -1,6 +1,6 @@
 import { and, eq, isNull } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { biologyActivities, InsertUser, users } from "../drizzle/schema";
+import { biologyActivities, biologyStudentSubmissions, InsertUser, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -100,6 +100,28 @@ export async function getBiologyActivity(id: string) {
   if (!db) throw new Error("Banco de dados indisponível.");
   const result = await db.select().from(biologyActivities).where(eq(biologyActivities.id, id)).limit(1);
   return result[0];
+}
+
+export async function getBiologyStudentSubmission(studentId: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível.");
+  const result = await db.select().from(biologyStudentSubmissions).where(eq(biologyStudentSubmissions.studentId, studentId)).limit(1);
+  return result[0];
+}
+
+export async function reserveBiologyStudentSubmission(input: { studentId: string; activityId: string }) {
+  const db = await getDb();
+  if (!db) throw new Error("Banco de dados indisponível.");
+  try {
+    await db.insert(biologyStudentSubmissions).values(input);
+    return true;
+  } catch (error) {
+    const mysqlError = error as { code?: string; errno?: number; cause?: { code?: string; errno?: number } };
+    if (mysqlError.code === "ER_DUP_ENTRY" || mysqlError.errno === 1062 || mysqlError.cause?.code === "ER_DUP_ENTRY" || mysqlError.cause?.errno === 1062) {
+      return false;
+    }
+    throw error;
+  }
 }
 
 export async function claimBiologySubmission(input: { id: string; answersJson: string; objectiveScore: number }) {

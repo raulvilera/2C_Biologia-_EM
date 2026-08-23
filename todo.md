@@ -1,0 +1,69 @@
+# Project TODO
+
+- [x] Modelar as 10 questões fixas da atividade: 7 objetivas e 3 discursivas.
+- [x] Implementar embaralhamento de questões e alternativas com gabarito preservado no servidor.
+- [x] Implementar seleção pública de estudante e início de uma nova atividade.
+- [x] Implementar rascunho local no navegador e restauração segura por estudante/atividade.
+- [x] Impedir mais de um envio de respostas para a mesma atividade.
+- [x] Corrigir automaticamente as 7 questões objetivas e calcular a nota objetiva.
+- [x] Integrar o envio server-side com o Apps Script da aba 2ºBIO 3º.
+- [x] Verificar que nenhum metadado de gabarito seja exposto ao navegador.
+- [x] Proteger a resposta pública contra metadados de gabarito presentes em registros antigos.
+- [x] Corrigir a confirmação de envio único no resultado da atualização MySQL.
+- [x] Completar o payload de envio com os dados escolares exigidos pelo Apps Script.
+- [x] Criar testes Vitest para banco fixo, embaralhamento, correção e envio único.
+- [x] Cobrir em Vitest a aceitação do primeiro envio e o bloqueio do segundo.
+- [x] Construir a interface pública elegante, responsiva e acessível para a 2ª Série C.
+- [x] Validar a conexão com Apps Script, criação da atividade e fluxo de envio.
+- [x] Confirmar remotamente o registro no Apps Script com o payload escolar completo.
+- [x] Criar checkpoint e entregar o site pronto para publicação permanente.
+- [x] Selecionar imagens científicas reais e ilustrações 3D para bioética/células HeLa, DNA/RNA, transcrição e tradução.
+- [x] Integrar uma imagem temática acessível em cada enunciado da atividade.
+- [x] Validar responsividade, legibilidade e desempenho dos novos recursos visuais.
+- [x] Verificar em desktop e celular a renderização de imagens em múltiplos enunciados.
+- [x] Inspecionar o carregamento dos recursos visuais e confirmar que são entregues de forma otimizada.
+- [x] Criar checkpoint da atualização com imagens científicas nos enunciados.
+- [x] Otimizar a micrografia real para entrega web com tamanho reduzido.
+- [x] Substituir todas as ilustrações 3D indisponíveis por imagens entregues de forma confiável.
+- [x] Trocar o selo “Apps Script: ligado” por “Conectado”.
+- [x] Remover sugestões de instalação de aplicativo da interface do projeto.
+- [x] Verificar e remover qualquer marca Manus que esteja sob controle do código da aplicação.
+- [x] Validar as correções no domínio público em tela móvel.
+- [x] Salvar checkpoint e publicar a correção de imagens e interface.
+- [x] Confirmar no domínio público que não há sugestão de instalar aplicativo.
+- [x] Registrar a limitação da marca externa “Made with Manus” quando ela for inserida fora do código do site.
+- [x] Investigar o manifesto externo injetado pela publicação e seu potencial de sugerir instalação em celulares.
+- [x] Enviar todos os arquivos versionáveis do projeto para o repositório GitHub raulvilera/2C_Biologia-_EM e confirmar o commit remoto.
+- [x] Diagnosticar e adaptar a interface para implantação funcional na Vercel com rewrites seguros para o servidor e os dados permanentes.
+- [x] Validar o link de produção da Vercel sem enviar respostas de alunos.
+- [x] Definir a execução Vercel como interface estática com rewrites para o servidor permanente, em vez de uma função Express duplicada.
+- [x] Avaliar migração full-stack autônoma na Vercel: não necessária para a implantação atual, que usa rewrites seguros para o backend permanente.
+- [x] Substituir imagens repetidas por recursos reais, distintos e relevantes em cada um dos dez enunciados.
+- [x] Transformar alternativas em botões azul-escuros em alto-relevo, com texto branco em negrito, brilho de borda e efeito afundado ao selecionar.
+- [x] Validar imagens, contraste, estados de seleção e responsividade no domínio Vercel.
+- [x] Confirmar no domínio Vercel, em desktop e celular, duas questões com imagens reais carregadas e alternativas selecionadas em alto-relevo.
+- [x] Validar em largura móvel no domínio Vercel as imagens distintas e o estado afundado da alternativa selecionada, sem envio de respostas.
+- [x] Documentar as variáveis obrigatórias na Vercel sem registrar valores secretos no repositório.
+- [x] Configurar a Vercel como interface estática com rewrites para API e imagens do servidor permanente.
+- [x] Exibir alternativas claras no estado normal e aplicar azul-escuro apenas à alternativa selecionada.
+- [x] Redimensionar os cartões de imagem para leitura mais equilibrada em desktop e celular.
+- [x] Ampliar a diversidade visual com recursos científicos reais mais variados e validar a atualização na Vercel.
+- [x] Impedir no servidor um novo envio definitivo para o mesmo aluno, inclusive em uma nova tentativa ou outro navegador.
+- [x] Cobrir em testes o bloqueio de segunda tentativa por aluno e validar a regra publicada.
+- [x] Salvar e publicar o bloqueio por aluno antes de confirmar a regra aos estudantes.
+- [x] Substituir a ilustração estática de abertura por uma estrutura 3D de DNA com componentes internos visíveis.
+- [x] Animar a estrutura de DNA com rotação contínua, respeitando desempenho e preferência por menos movimento.
+- [x] Validar a visualização 3D animada no domínio Vercel em desktop e celular.
+- [x] Capturar em 375 px no domínio Vercel a hélice em rotação sem deslocar o formulário de identificação.
+- [x] Exibir as dez questões desde o carregamento da página, sem exigir seleção prévia de estudante.
+- [x] Embaralhar a ordem das questões e alternativas em cada acesso mantendo números sequenciais de 1 a 10.
+- [x] Manter seleção de estudante apenas como requisito para envio único e registro das respostas.
+- [x] Validar o novo fluxo permanente no domínio Vercel sem enviar respostas de alunos.
+- [x] Remover o botão “Iniciar atividade” do fluxo de identificação.
+- [x] Exibir automaticamente número de chamada, RA, dígito e e-mail institucional após seleção do estudante.
+- [x] Validar no domínio Vercel os dados preenchidos e o bloqueio de envio único sem enviar respostas.
+- [x] Comprovar pelo domínio Vercel que um aluno já bloqueado continua recusado no caminho final de criação sob demanda.
+- [x] Substituir a faixa introdutória das questões por uma divisória “ATIVIDADE DE BIOLOGIA (3º BIMESTRE)”.
+- [x] Exibir os temas DNA, RNA, Tradução e Replicação na nova divisória.
+- [x] Aplicar sombreamento inferior ao título principal e validar a divisória em celular na Vercel.
+- [x] Validar explicitamente a divisória publicada no domínio Vercel em viewport móvel de 375 px e registrar a evidência.

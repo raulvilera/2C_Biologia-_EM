@@ -7,4 +7,5 @@ export const ENV = {
   isProduction: process.env.NODE_ENV === "production",
   forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
   forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
+  googleAppsScriptUrl: process.env.GOOGLE_APPS_SCRIPT_URL ?? "https://script.google.com/macros/s/AKfycbzGAB0aifvKGD5NU5rrvupIk2UruQoC1HBE_PxsrzPmdDHCmzfd6PHf3tXkZhm5B5sX/exec",
 };

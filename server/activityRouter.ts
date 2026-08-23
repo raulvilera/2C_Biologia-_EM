@@ -18,7 +18,7 @@ export const activityRouter = router({
   students: publicProcedure.query(() => STUDENTS.map(student => ({ id: String(student.number), name: student.name, number: student.number, ra: student.ra, digit: student.digit, email: student.email }))),
   connection: publicProcedure.query(async () => {
     const payload = await checkAppsScriptConnection();
-    return { connected: true, sheet: payload.sheet ?? "2ºBIO 3º" };
+    return { connected: true, sheet: payload.sheet ?? "2ªBIO 3º" };
   }),
   preview: publicProcedure.input(accessSchema).query(({ input }) => {
     const activity = buildActivity({
